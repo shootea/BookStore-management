@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library Home</title>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      /* Background image with overlay */
+      background: 
+        linear-gradient(rgba(9, 9, 9, 0.63), rgba(0, 0, 0, 0.6)),
+        url('https://media.istockphoto.com/id/501297376/photo/carlsbad-library.jpg?s=612x612&w=0&k=20&c=JfVKnO0GsloNVtvY7Bdte05n0u6y8FQU0WFWQ6ZYfC8%3D') no-repeat center center fixed;
+      background-size: cover;
+
+      /* Center content vertically and horizontally */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+
+      padding: 20px;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 30px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+      letter-spacing: 2px;
+      text-align: center;
+      color:rgb(246, 242, 247);
+    }
+
+    /* Section wrapper with background and padding */
+    .section-wrapper {
+      background: rgba(231, 200, 241, 0.28);
+      border-radius: 25px;
+      padding: 40px 50px;
+      box-shadow: 0 15px 40px rgba(15, 14, 14, 0.5);
+      max-width: 1100px;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns fixed */
+      gap: 30px;
+      width: 100%;
+    }
+
+    .card {
+      background: rgba(12, 12, 12, 0);
+      border-radius: 20px;
+      padding: 30px 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      user-select: none;
+      border: 2px solid transparent;
+    }
+
+    .card:hover {
+      background: #fff;
+      color:rgb(152, 118, 195);
+      box-shadow: 0 12px 30px rgb(244, 242, 247);
+      border-color: #764ba2;
+      transform: translateY(-8px);
+    }
+
+
+    .card:active {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(39, 26, 53, 0.4);
+    }
+
+    .card-icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .card:hover .card-icon {
+      color: #667eea;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .card-title {
+        font-size: 1.2rem;
+      }
+      .card-icon {
+        font-size: 3rem;
+      }
+      .section-wrapper {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+  <div class="section-wrapper">
+    <h1>Welcome To The Bookstore</h1>
+    <div class="container">
+      <div class="card" onclick="location.href='/addgenre'">
+        <span class="material-icons card-icon">library_add</span>
+        <div class="card-title">Add Genre</div>
+      </div>
+      <div class="card" onclick="location.href='/addauthor'">
+        <span class="material-icons card-icon">person_add</span>
+        <div class="card-title">Add Author</div>
+      </div>
+      <div class="card" onclick="location.href='/addbooks'">
+        <span class="material-icons card-icon">note_add</span>
+        <div class="card-title">Add Book</div>
+      </div>
+      <div class="card" onclick="location.href='/author'">
+        <span class="material-icons card-icon">people</span>
+        <div class="card-title">Author</div>
+      </div>
+      <div class="card" onclick="location.href='/genre'">
+        <span class="material-icons card-icon">category</span>
+        <div class="card-title">Genre</div>
+      </div>
+      <div class="card" onclick="location.href='/books'">
+        <span class="material-icons card-icon">menu_book</span>
+        <div class="card-title">Book</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 
+
